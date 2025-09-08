@@ -1,0 +1,167 @@
+/* Hero Section */
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #1e1e2f, #3a3a52);
+  color: #fff;
+}
+
+.contact-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Buttons */
+.location-button,
+.whatsapp-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.whatsapp-button {
+  background: #25D366;
+  color: white;
+  margin-left: 10px;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+.location-button {
+  background: #ffcc00;
+  color: #222;
+}
+
+.location-button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* Google Maps */
+.contact-map {
+  margin: 40px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  border: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .contact-info,
+  .contact-form {
+    margin-bottom: 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}

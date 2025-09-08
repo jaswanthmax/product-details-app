@@ -1,0 +1,140 @@
+/* Navbar container */
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #000000; /* changed from gradient to solid black */
+  color: white;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  width: 140px;      /* adjust width as needed */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Desktop Nav */
+.desktop-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.desktop-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.desktop-nav a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #2c2c40;
+  border-radius: 25px;
+  padding: 4px 10px;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 6px 10px;
+  color: white;
+  width: 120px;
+}
+.search-bar button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #ffcc00;
+  color: #1e1e2f;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.search-bar button:hover {
+  background: #ffdb4d;
+}
+
+/* 3 Dots */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ffcc00;
+  transition: transform 0.2s ease;
+}
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+/* Mobile Dropdown */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: #2c2c40;
+  padding: 20px;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.mobile-menu li {
+  margin: 12px 0;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.mobile-menu a:hover {
+  color: #ffcc00;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .desktop-nav,
+  .search-bar.desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

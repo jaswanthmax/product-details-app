@@ -1,0 +1,142 @@
+/* 🌟 Category Page Container */
+.category-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Page Title */
+.category-container h1.vv {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+}
+
+.category-container h1.vv::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff5722;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* 🔹 Search Bar */
+.search-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 12px;    /* small input */
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 6px rgba(255, 87, 34, 0.4);
+}
+
+/* 🔹 Product Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* desktop */
+  gap: 25px;
+}
+
+/* 🔹 Product Card */
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.category-card img {
+  width: 80%;           /* Limit width to 80% of the card */
+  max-width: 200px;     /* Optional: prevent it from getting too wide */
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  background: #fafafa;
+  display: block;
+  margin: 0 auto;       /* Center image horizontally */
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Name */
+.category-card h3 {
+  padding: 10px 6px 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Product Price */
+.category-card .price {
+  font-weight: bold;
+  color: #ff5722;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* 🔹 No results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* 🔹 Responsive: Tablet (2 per row) */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .category-container h1.vv {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .category-card img {
+    max-height: 180px;
+  }
+}
+
+/* 🔹 Very Small Screens (1 per row) */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card img {
+    max-height: 160px;
+  }
+}

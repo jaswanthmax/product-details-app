@@ -1,0 +1,87 @@
+/* Hangers Page Container */
+.category-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.category-container h1.vv {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Grid of Hanger Products */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  gap: 20px;
+}
+
+/* Individual Hanger Card */
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.category-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  background: #f5f5f5;
+  display: block;
+  margin: auto;
+}
+
+/* Product Name */
+.category-card h3 {
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Product Price */
+.category-card .price {
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-card img {
+    max-height: 200px;
+  }
+
+  .category-container h1.vv {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .category-card h3 {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .category-card .price {
+    font-size: 0.9rem;
+  }
+}

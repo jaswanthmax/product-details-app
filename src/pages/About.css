@@ -1,0 +1,104 @@
+/* Container for About page */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px; /* extra top padding for navbar */
+  background: linear-gradient(180deg, #f2f2f2 0%, #ffffff 100%);
+  min-height: calc(100vh - 60px);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card style */
+.about-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+.about-card h1 {
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Paragraphs */
+.about-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.location-button,
+.whatsapp-button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  background: #25D366;
+  color: white;
+  margin-left: 10px;
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* Location Button */
+.location-button {
+  background: #ffcc00;
+  color: #222;
+}
+
+.location-button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 60px 15px;
+  }
+
+  .about-card {
+    padding: 30px 20px;
+  }
+
+  .about-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+
+  .location-button,
+  .whatsapp-button {
+    width: 100%;
+    margin: 10px 0;
+    margin-left: 0;
+  }
+}
