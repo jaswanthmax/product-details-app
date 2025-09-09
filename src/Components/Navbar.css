@@ -138,3 +138,34 @@
     transform: translateY(0);
   }
 }
+/* Base styling for logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 180px;   /* default size for desktop */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* subtle hover effect */
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;  /* smaller logo for tablets/mobiles */
+  }
+}
+
+/* 📱 Small mobile view */
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 90px;   /* even smaller for small phones */
+  }
+}
+

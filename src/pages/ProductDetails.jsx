@@ -1,3 +1,4 @@
+// src/pages/ProductDetails.jsx
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "./ProductDetails.css";
@@ -18,8 +19,8 @@ function ProductDetails() {
       storageKey = "packagingProducts";
     } else if (location.pathname.includes("/textile")) {
       storageKey = "textileProducts";
-    } else if (location.pathname.includes("/allproducts")) {
-      storageKey = "allProducts";
+    } else if (location.pathname.includes("/all")) {
+      storageKey = "allProducts"; // ✅ FIXED
     }
 
     if (storageKey) {
@@ -27,13 +28,17 @@ function ProductDetails() {
       const found = stored.find((item) => item.id === parseInt(id));
       if (found) {
         setProduct(found);
-        setSelectedImage(found.mainImage); // default image
+        setSelectedImage(found.mainImage); // set default image
       }
     }
   }, [id, location.pathname]);
 
   if (!product) {
-    return <p style={{ textAlign: "center", marginTop: "2rem" }}>Product not found!</p>;
+    return (
+      <p style={{ textAlign: "center", marginTop: "2rem" }}>
+        Product not found!
+      </p>
+    );
   }
 
   return (
@@ -41,7 +46,11 @@ function ProductDetails() {
       {/* Left Side: Images */}
       <div className="image-container">
         <div className="main-image-container">
-          <img src={selectedImage} alt={product.name} className="main-image" />
+          <img
+            src={selectedImage}
+            alt={product.name}
+            className="main-image"
+          />
           <button className="close-btn" onClick={() => navigate(-1)}>
             ✕
           </button>
@@ -55,7 +64,9 @@ function ProductDetails() {
                 key={index}
                 src={thumb}
                 alt={`${product.name} ${index}`}
-                className={`thumbnail-img ${selectedImage === thumb ? "active" : ""}`}
+                className={`thumbnail-img ${
+                  selectedImage === thumb ? "active" : ""
+                }`}
                 onClick={() => setSelectedImage(thumb)}
               />
             ))}

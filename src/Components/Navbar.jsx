@@ -7,7 +7,9 @@ function Navbar({ searchTerm, setSearchTerm }) {
 
   return (
     <nav className="navbar">
-      <div className="logo">MyApp</div>
+      <div className="logo">
+        <img src="/logo/image.png" alt="MyApp Logo" />
+      </div>
 
       <ul className="nav-links desktop-nav">
         <li><Link to="/">Home</Link></li>
